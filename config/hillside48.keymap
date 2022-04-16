@@ -9,13 +9,13 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/mouse.h>
+// #include <dt-bindings/zmk/mouse.h>
 
-// For mouse movement
-#define MOVE_UP MOVE_VERT(-1000)
-#define MOVE_DOWN MOVE_VERT(1000)
-#define MOVE_LEFT MOVE_HOR(-1000)
-#define MOVE_RIGHT MOVE_HOR(1000)
+// // For mouse movement
+// #define MOVE_UP MOVE_VERT(-1000)
+// #define MOVE_DOWN MOVE_VERT(1000)
+// #define MOVE_LEFT MOVE_HOR(-1000)
+// #define MOVE_RIGHT MOVE_HOR(1000)
 
 #define QWERTY 1
 #define NUMB 2
@@ -129,12 +129,21 @@
 
                 navi_layer {
                         bindings = <
-                            &kp TAB &kp EXCL &kp AT &kp UP &none &none                                  &to SETTINGS  &mwh SCROLL_LEFT    &mmv MOVE_UP    &mwh SCROLL_RIGHT  &none  &none
-                            &kp CLCK &none &kp LEFT &kp DOWN &kp RIGHT &none                            &to QWERTY  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT  &none  &none
-                            &sk LSHFT  &none  &kp C_VOL_DN  &kp K_MUTE  &kp C_VOL_UP  &kp C_PP            &kp LG(LA(LC(K)))  &mkp RCLK  &mwh SCROLL_UP &mwh SCROLL_DOWN  &none  &none
+                            &kp TAB &kp EXCL &kp AT &kp UP &none &none                                  &to SETTINGS  &none    &kp UP    &none  &none  &none
+                            &kp CLCK &none &kp LEFT &kp DOWN &kp RIGHT &none                            &to QWERTY  &kp LEFT &kp DOWN &kp RIGHT  &none  &none
+                            &sk LSHFT  &none  &kp C_VOL_DN  &kp K_MUTE  &kp C_VOL_UP  &kp C_PP            &kp LG(LA(LC(K)))  &none  &none &none  &none  &none
                                 &trans       &trans        &to 0      &trans       &trans             &trans       &trans         &trans    &trans      &to NUMB
                         >;
                 };
+
+                // navi_layer {
+                //         bindings = <
+                //             &kp TAB &kp EXCL &kp AT &kp UP &none &none                                  &to SETTINGS  &mwh SCROLL_LEFT    &mmv MOVE_UP    &mwh SCROLL_RIGHT  &none  &none
+                //             &kp CLCK &none &kp LEFT &kp DOWN &kp RIGHT &none                            &to QWERTY  &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT  &none  &none
+                //             &sk LSHFT  &none  &kp C_VOL_DN  &kp K_MUTE  &kp C_VOL_UP  &kp C_PP            &kp LG(LA(LC(K)))  &mkp RCLK  &mwh SCROLL_UP &mwh SCROLL_DOWN  &none  &none
+                //                 &trans       &trans        &to 0      &trans       &trans             &trans       &trans         &trans    &trans      &to NUMB
+                //         >;
+                // };
 
                 settings_layer {
                         bindings = <
